@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StackAndQueues
 {
-    internal class StackAndQueues
+    public class StackAndQueues
     {
         private Node top;
         public StackAndQueues()
@@ -25,7 +25,7 @@ namespace StackAndQueues
                 node.next = this.top;
             }
             this.top = node;
-            Console.WriteLine("{0} push to stack", value);
+            Console.WriteLine("{0} Push To Stack", value);
         }
         public void Display()
         {
@@ -34,6 +34,33 @@ namespace StackAndQueues
             {
                 Console.Write(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            Console.WriteLine("{0} is in the top of the stack", this.top.data);
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty, Deletion is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is " + this.top.data);
+            this.top = this.top.next;
+        }
+        public void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
             }
         }
     }

@@ -8,11 +8,11 @@ namespace StackAndQueues
 
             Console.WriteLine(" **** Welcome to Linked List Program **** ");
             bool end = true;
-            Console.WriteLine("\n1.StackPush\n2.End Of Program ");
+            Console.WriteLine("\n1.StackPush\n2.StackPickPop\n3.End Of Program ");
             while (end)
             {
                 StackAndQueues stack = new StackAndQueues();
-                Console.WriteLine("\nChoose An option");
+                Console.WriteLine("\nChoose An Options: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,13 +23,18 @@ namespace StackAndQueues
                         stack.Display();
                         break;
                     case 2:
+                        stack.Push(70);
+                        stack.Push(30);
+                        stack.Push(56);
+                        stack.IsEmpty();
+                        break;
+                    case 3:
                         end = false;
                         Console.WriteLine("Program Is Ended.");
                         break;
                     default:
                         Console.WriteLine("Enter The Correct Option");
                         break;
-
                 }
             }
         }
