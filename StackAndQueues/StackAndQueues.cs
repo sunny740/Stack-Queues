@@ -25,7 +25,7 @@ namespace StackAndQueues
                 node.next = this.top;
             }
             this.top = node;
-            Console.WriteLine("{0} Push To Stack", value);
+            Console.WriteLine("{0} pushed to stack", value);
         }
         public void Display()
         {
@@ -52,7 +52,7 @@ namespace StackAndQueues
                 Console.WriteLine("Stack is empty, Deletion is not possible");
                 return;
             }
-            Console.WriteLine("Value popped is " + this.top.data);
+            Console.WriteLine("Value Popped is " + this.top.data);
             this.top = this.top.next;
         }
         public void IsEmpty()
